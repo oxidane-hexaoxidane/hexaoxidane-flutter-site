@@ -25,22 +25,37 @@ class PageScaffold extends StatelessWidget {
   }
 }
 
-class _ScrollableBody extends StatelessWidget {
+class _ScrollableBody extends StatefulWidget {
   final Widget? body;
 
-  const _ScrollableBody({
-    this.body,
-  });
+  const _ScrollableBody({this.body});
+
+  @override
+  State<_ScrollableBody> createState() => __ScrollableBodyState();
+}
+
+class __ScrollableBodyState extends State<_ScrollableBody> {
+  final PageStorageKey _pageStorageKey = const PageStorageKey('scroll');
+
+  late ScrollController _scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _scrollController = ScrollController(keepScrollOffset: true, initialScrollOffset: 0.0);
+  }
 
   @override
   Widget build(BuildContext context) {
     return ScrollConfiguration(
+      key: _pageStorageKey,
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
       child: SingleChildScrollView(
-        primary: true,
+        controller: _scrollController,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(25, 20, 25, 0),
-          child: body ?? const SizedBox.shrink(),
+          child: widget.body ?? const SizedBox.shrink(),
         ),
       ),
     );
