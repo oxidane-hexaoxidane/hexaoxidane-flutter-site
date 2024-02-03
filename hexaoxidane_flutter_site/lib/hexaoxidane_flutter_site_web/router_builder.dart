@@ -57,7 +57,7 @@ class _IndexRouteBuilder extends _RouteBuilder {
     return GoRoute(
       path: RoutePathBuilder().index().path,
       builder: (BuildContext context, GoRouterState state) {
-        return HomePage();
+        return const HomePage();
       },
     );
   }
