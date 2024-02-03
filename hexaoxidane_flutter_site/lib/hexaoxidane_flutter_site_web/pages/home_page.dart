@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
               //   ),
               // ),
               child: Image.asset(
-                'images/promo/doctor_logo.png',
+                'assets/images/promo/doctor_logo.png',
                 width: 700,
                 height: 230,
               ),
