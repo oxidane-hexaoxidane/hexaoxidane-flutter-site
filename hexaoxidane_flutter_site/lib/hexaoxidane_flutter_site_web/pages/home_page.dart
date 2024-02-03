@@ -16,7 +16,12 @@ class _HomePageState extends State<HomePage> {
       background: Container(
         alignment: Alignment.center,
         color: Colors.black,
-        child: Image.asset('assets/images/skull-2.jpg'),
+        child: Image.asset(
+          'assets/images/promo/deity_beauty_shot_1.png',
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          fit: BoxFit.cover,
+        ),
       ),
       body: PageContentScaffold(
         alignment: PageContentAlignment(

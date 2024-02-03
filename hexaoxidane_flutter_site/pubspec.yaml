@@ -77,6 +77,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/images/promo/
     - assets/images/socials/
 
   # An image asset can refer to one or more resolution-specific "variants", see

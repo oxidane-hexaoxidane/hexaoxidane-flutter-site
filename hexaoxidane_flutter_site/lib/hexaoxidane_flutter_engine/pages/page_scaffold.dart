@@ -34,11 +34,9 @@ class _ScrollableBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scrollbar(
-      thumbVisibility: true,
-      trackVisibility: true,
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
       child: SingleChildScrollView(
-        primary: true,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(25, 20, 25, 0),
           child: body ?? const SizedBox.shrink(),
