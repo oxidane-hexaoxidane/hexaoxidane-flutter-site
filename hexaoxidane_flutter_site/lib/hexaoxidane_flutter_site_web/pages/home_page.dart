@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import 'package:hexaoxidane_flutter_site/hexaoxidane_flutter_engine/hexaoxidane_flutter_engine.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,17 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String _email = '';
-
-  late TextEditingController _emailFieldController;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _emailFieldController = TextEditingController();
-  }
-
   @override
   Widget build(BuildContext context) {
     return PageScaffold(
@@ -94,30 +85,16 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const SizedBox(height: 50),
                     const Text('Join our maling list?', style: TextStyles.heading3),
-                    const SizedBox(height: 15),
-                    ConstrainedBox(
-                      constraints: const BoxConstraints(
-                        minWidth: 100,
-                        maxWidth: 450,
-                        minHeight: 100,
-                        maxHeight: 100,
-                      ),
-                      child: TextField(
-                        controller: _emailFieldController,
-                        onChanged: (String text) => _email = text,
-                        decoration: const InputDecoration(
-                          labelText: 'Email Address',
-                          hintText: 'Email Address',
-                          filled: true,
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     ElevatedButton(
-                      onPressed: () {},
-                      child: const Text("Hell yeah!"),
+                      onPressed: () {
+                        // https://mailchi.mp/6cf31d006fcb/hexaoxidane-updates
+                        Uri uri = Uri.https('mailchi.mp', '6cf31d006fcb/hexaoxidane-updates');
+                        launchUrl(uri);
+                      },
+                      child: const Text('Yes, let\'s go!'),
                     ),
+                    const SizedBox(height: 15),
                   ],
                 ),
               ),
