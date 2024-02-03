@@ -31,14 +31,14 @@ class _HomePageState extends State<HomePage> {
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height - 150,
-            child: const Align(
+            child: Align(
               alignment: Alignment.bottomCenter,
               child: Text(
                 'HexaOxidane',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w900,
-                  fontSize: 50,
+                  fontSize: ResponsiveBreakpoints.of(context).isMobile ? 40 : 55,
                 ),
               ),
             ),
