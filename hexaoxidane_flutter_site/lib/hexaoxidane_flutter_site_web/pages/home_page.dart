@@ -33,13 +33,18 @@ class _HomePageState extends State<HomePage> {
             height: MediaQuery.of(context).size.height - 150,
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: Text(
-                'HexaOxidane',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900,
-                  fontSize: ResponsiveBreakpoints.of(context).isMobile ? 40 : 55,
-                ),
+              // child: Text(
+              //   'HexaOxidane',
+              //   style: TextStyle(
+              //     color: Colors.white,
+              //     fontWeight: FontWeight.w900,
+              //     fontSize: ResponsiveBreakpoints.of(context).isMobile ? 40 : 55,
+              //   ),
+              // ),
+              child: Image.asset(
+                'images/promo/doctor_logo.png',
+                width: 700,
+                height: 230,
               ),
             ),
           ),
@@ -52,11 +57,8 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    const SizedBox(height: 20),
-                    const Text('We are making the game...', style: TextStyles.display),
-                    const SizedBox(height: 30),
-                    const Text('DOCTOR!', style: TextStyles.title),
-                    const SizedBox(height: 30),
+                    // const SizedBox(height: 20),
+                    // const Text('We are making the game...', style: TextStyles.display),
                     const Text(
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat sem nec mollis viverra. Vestibulum condimentum nulla in ligula condimentum semper ac et ligula. Duis sit amet gravida dolor. Aenean ultricies pharetra neque at porttitor. Etiam magna urna, vulputate non finibus non, tristique varius metus. Sed libero nunc, facilisis a leo vel, hendrerit efficitur nunc. Nulla lorem sem, lobortis at purus id, cursus tincidunt metus. Praesent eu tempus mauris. Maecenas mi nisl, bibendum et porttitor a, tempus et dolor. Cras pellentesque lectus felis, luctus ullamcorper felis vehicula vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel molestie magna. \n \n Integer rhoncus, diam in ultricies efficitur, arcu leo ultrices est, sit amet blandit ex sem eget diam. Praesent commodo diam eget lectus ultricies dictum. Curabitur pharetra pretium finibus. Vestibulum faucibus porttitor augue vel porttitor. Donec tellus velit, euismod ut dolor sit amet, vestibulum imperdiet neque. In porta ante vel eros tincidunt pharetra. Aenean sed ultrices tortor, ut ullamcorper sem. Sed rutrum bibendum nisl ac condimentum.!',
                       style: TextStyles.display,
