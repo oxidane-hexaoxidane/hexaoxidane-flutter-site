@@ -33,7 +33,21 @@ class _HomePageState extends State<HomePage> {
           direction: PageContentDirection.vertical,
         ),
         children: [
-          const SizedBox(height: 1200),
+          const SizedBox(height: 1000),
+          const SizedBox(
+            height: 400,
+            child: Align(
+              alignment: Alignment.center,
+              child: Text(
+                'HexaOxidane',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 50,
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             width: double.infinity,
             height: 1000,
@@ -55,24 +69,25 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
+                          IconButton(
+                            iconSize: 30,
                             onPressed: () {},
-                            child: const Text("X"),
+                            icon: Image.asset('assets/images/socials/x.jpg'),
                           ),
-                          const SizedBox(width: 10),
-                          ElevatedButton(
+                          IconButton(
+                            iconSize: 30,
                             onPressed: () {},
-                            child: const Text("Reddit"),
+                            icon: Image.asset('assets/images/socials/reddit.png'),
                           ),
-                          const SizedBox(width: 10),
-                          ElevatedButton(
+                          IconButton(
+                            iconSize: 30,
                             onPressed: () {},
-                            child: const Text("YouTube"),
+                            icon: Image.asset('assets/images/socials/youtube.png'),
                           ),
-                          const SizedBox(width: 10),
-                          ElevatedButton(
+                          IconButton(
+                            iconSize: 30,
                             onPressed: () {},
-                            child: const Text("F95Zone"),
+                            icon: Image.asset('assets/images/socials/f95zone.png'),
                           ),
                           const SizedBox(width: 10),
                         ],
