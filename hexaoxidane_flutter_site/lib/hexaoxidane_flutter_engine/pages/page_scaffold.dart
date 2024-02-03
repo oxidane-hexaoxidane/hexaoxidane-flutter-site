@@ -37,6 +37,7 @@ class _ScrollableBody extends StatelessWidget {
     return ScrollConfiguration(
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
       child: SingleChildScrollView(
+        primary: true,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(25, 20, 25, 0),
           child: body ?? const SizedBox.shrink(),
