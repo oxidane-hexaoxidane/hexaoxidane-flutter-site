@@ -42,15 +42,14 @@ class _HomePageState extends State<HomePage> {
                 'HexaOxidane',
                 style: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 50,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 55,
                 ),
               ),
             ),
           ),
           SizedBox(
             width: double.infinity,
-            height: 1000,
             child: ColoredBox(
               color: Colors.white,
               child: Padding(
@@ -96,8 +95,13 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(height: 50),
                     const Text('Join our maling list?', style: TextStyles.heading3),
                     const SizedBox(height: 15),
-                    SizedBox(
-                      width: 450,
+                    ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        minWidth: 100,
+                        maxWidth: 450,
+                        minHeight: 100,
+                        maxHeight: 100,
+                      ),
                       child: TextField(
                         controller: _emailFieldController,
                         onChanged: (String text) => _email = text,
