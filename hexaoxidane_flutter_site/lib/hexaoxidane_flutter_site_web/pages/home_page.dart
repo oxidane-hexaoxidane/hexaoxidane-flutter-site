@@ -24,11 +24,10 @@ class _HomePageState extends State<HomePage> {
           direction: PageContentDirection.vertical,
         ),
         children: [
-          const SizedBox(height: 1000),
-          const SizedBox(
-            height: 400,
-            child: Align(
-              alignment: Alignment.center,
+          SizedBox(
+            height: MediaQuery.of(context).size.height - 150,
+            child: const Align(
+              alignment: Alignment.bottomCenter,
               child: Text(
                 'HexaOxidane',
                 style: TextStyle(
@@ -39,6 +38,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          const SizedBox(height: 100),
           SizedBox(
             width: double.infinity,
             child: ColoredBox(
