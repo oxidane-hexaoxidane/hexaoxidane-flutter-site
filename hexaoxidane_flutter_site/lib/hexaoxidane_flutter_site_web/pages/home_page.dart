@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'package:hexaoxidane_flutter_site/hexaoxidane_flutter_engine/hexaoxidane_flutter_engine.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,14 +32,6 @@ class _HomePageState extends State<HomePage> {
             height: MediaQuery.of(context).size.height - 150,
             child: Align(
               alignment: Alignment.bottomCenter,
-              // child: Text(
-              //   'HexaOxidane',
-              //   style: TextStyle(
-              //     color: Colors.white,
-              //     fontWeight: FontWeight.w900,
-              //     fontSize: ResponsiveBreakpoints.of(context).isMobile ? 40 : 55,
-              //   ),
-              // ),
               child: Image.asset(
                 'assets/images/promo/doctor_logo_2.png',
                 width: 700,
@@ -60,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                     // const SizedBox(height: 20),
                     // const Text('We are making the game...', style: TextStyles.display),
                     const Text(
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat sem nec mollis viverra. Vestibulum condimentum nulla in ligula condimentum semper ac et ligula. Duis sit amet gravida dolor. Aenean ultricies pharetra neque at porttitor. Etiam magna urna, vulputate non finibus non, tristique varius metus. Sed libero nunc, facilisis a leo vel, hendrerit efficitur nunc. Nulla lorem sem, lobortis at purus id, cursus tincidunt metus. Praesent eu tempus mauris. Maecenas mi nisl, bibendum et porttitor a, tempus et dolor. Cras pellentesque lectus felis, luctus ullamcorper felis vehicula vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel molestie magna. \n \n Integer rhoncus, diam in ultricies efficitur, arcu leo ultrices est, sit amet blandit ex sem eget diam. Praesent commodo diam eget lectus ultricies dictum. Curabitur pharetra pretium finibus. Vestibulum faucibus porttitor augue vel porttitor. Donec tellus velit, euismod ut dolor sit amet, vestibulum imperdiet neque. In porta ante vel eros tincidunt pharetra. Aenean sed ultrices tortor, ut ullamcorper sem. Sed rutrum bibendum nisl ac condimentum.!',
+                      "DOCTOR! is an adult game set in the medieval era during the times of plague, and you're a doctor. There were many types of diseases looming around such as cold, fever, etc, but there is one particular type that baffles everyone. It's the kind of illness that mostly affects women, and no one knows when it will hit; one just kinda gets it, and what's scary is you don't know what's gonna happen to them as some became depressed, some got lonely, and others even got rabid. \n\nFortunately, as the doctor, you know the cure. You know exactly what these women need. A huge, big, and juicy cock only you can provide.",
                       style: TextStyles.display,
                     ),
                     const SizedBox(height: 100),
@@ -108,6 +99,29 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(height: 15),
                   ],
                 ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 150),
+          Container(
+            alignment: Alignment.center,
+            child: const Text(
+              'HexaOxidane',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 35,
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            child: const Text(
+              '© 2024',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w900,
+                fontSize: 12,
               ),
             ),
           ),
