@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    const Color backgroundColor = Color.fromARGB(220, 107, 65, 39);
+    const Color backgroundColor = Color.fromARGB(235, 107, 65, 39);
     const Color textColor = Color.fromARGB(255, 228, 205, 104);
 
     TextStyle headerTextStyle = GoogleFonts.cinzel(
