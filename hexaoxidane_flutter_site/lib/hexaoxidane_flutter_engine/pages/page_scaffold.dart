@@ -35,7 +35,7 @@ class _ScrollableBody extends StatefulWidget {
 }
 
 class __ScrollableBodyState extends State<_ScrollableBody> {
-  final PageStorageKey _pageStorageKey = const PageStorageKey('scroll');
+  final PageStorageKey _pageStorageKey = const PageStorageKey('scrollable_body');
 
   late ScrollController _scrollController;
 
@@ -43,7 +43,10 @@ class __ScrollableBodyState extends State<_ScrollableBody> {
   void initState() {
     super.initState();
 
-    _scrollController = ScrollController(keepScrollOffset: true, initialScrollOffset: 0.0);
+    _scrollController = ScrollController(
+      keepScrollOffset: true,
+      initialScrollOffset: 0.0,
+    );
   }
 
   @override
