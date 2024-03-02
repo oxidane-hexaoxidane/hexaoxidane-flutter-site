@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:smooth_scroll_multiplatform/smooth_scroll_multiplatform.dart';
 
 class PageScaffold extends StatelessWidget {
   final Widget? body;
@@ -35,31 +36,24 @@ class _ScrollableBody extends StatefulWidget {
 }
 
 class __ScrollableBodyState extends State<_ScrollableBody> {
-  final PageStorageKey _pageStorageKey = const PageStorageKey('scrollable_body');
-
-  late ScrollController _scrollController;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _scrollController = ScrollController(
-      keepScrollOffset: true,
-      initialScrollOffset: 0.0,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return ScrollConfiguration(
-      key: _pageStorageKey,
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-      child: SingleChildScrollView(
-        controller: _scrollController,
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(25, 20, 25, 0),
-          child: widget.body ?? const SizedBox.shrink(),
-        ),
+      child: DynMouseScroll(
+        durationMS: 90,
+        scrollSpeed: 1,
+        animationCurve: Curves.linear,
+        builder: (BuildContext context, ScrollController controller, ScrollPhysics physics) {
+          return SingleChildScrollView(
+            controller: controller,
+            physics: physics,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(25, 20, 25, 0),
+              child: widget.body ?? const SizedBox.shrink(),
+            ),
+          );
+        },
       ),
     );
   }
