@@ -36,9 +36,12 @@ class _ScrollableBody extends StatefulWidget {
 }
 
 class __ScrollableBodyState extends State<_ScrollableBody> {
+  final PageStorageKey _pageStorageKey = const PageStorageKey('scrollable_body');
+
   @override
   Widget build(BuildContext context) {
     return ScrollConfiguration(
+      key: _pageStorageKey,
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
       child: DynMouseScroll(
         durationMS: 90,

@@ -47,6 +47,8 @@ dependencies:
   url_launcher: ^6.2.4
   mixpanel_flutter: ^2.2.0
   smooth_scroll_multiplatform: ^1.0.8
+  youtube_player_iframe: any
+  pointer_interceptor: ^0.10.1
 
 dev_dependencies:
   flutter_test:
