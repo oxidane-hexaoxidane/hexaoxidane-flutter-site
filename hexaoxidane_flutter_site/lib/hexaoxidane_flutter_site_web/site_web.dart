@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mixpanel_flutter/mixpanel_flutter.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:hexaoxidane_flutter_site/hexaoxidane_flutter_engine/hexaoxidane_flutter_engine.dart';
 import 'package:hexaoxidane_flutter_site/hexaoxidane_flutter_site/hexaoxidane_flutter_site.dart';
 import 'package:hexaoxidane_flutter_site/hexaoxidane_flutter_site_web/hexaoxidane_flutter_site_web.dart';
@@ -15,6 +16,12 @@ class SiteWeb extends StatefulWidget {
 }
 
 class _SiteWebState extends State<SiteWeb> {
+  @override
+  void initState() {
+    super.initState();
+    usePathUrlStrategy();
+  }
+
   @override
   Widget build(BuildContext context) {
     return ProviderScope(

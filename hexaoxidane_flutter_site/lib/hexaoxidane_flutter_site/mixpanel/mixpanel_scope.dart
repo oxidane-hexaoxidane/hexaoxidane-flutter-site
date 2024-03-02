@@ -31,7 +31,6 @@ class _MixpanelProviderState extends State<MixpanelProvider> {
         dataProvider: initMixpanel(),
         builder: (BuildContext context, Mixpanel mixpanel) {
           _mixpanel = mixpanel;
-          _mixpanel!.track('site_visit');
           return widget.builder(_mixpanel!);
         },
       );
