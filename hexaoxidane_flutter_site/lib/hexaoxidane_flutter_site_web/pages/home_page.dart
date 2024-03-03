@@ -18,18 +18,13 @@ class _HomePageState extends State<HomePage> {
   YoutubePlayerController? _youtubePlayerController;
 
   @override
-  void initState() {
-    super.initState();
-
-    // _youtubePlayerController = YoutubePlayerController.fromVideoId(
-    //   videoId: 'OVzp_X5Isqw',
-    //   autoPlay: false,
-    //   params: const YoutubePlayerParams(showFullscreenButton: true),
-    // );
-  }
-
-  @override
   Widget build(BuildContext context) {
+    _youtubePlayerController = YoutubePlayerController.fromVideoId(
+      videoId: 'MHh3hlOEjQg',
+      autoPlay: false,
+      params: const YoutubePlayerParams(showFullscreenButton: true),
+    );
+
     const Color backgroundColor = Color.fromARGB(235, 107, 65, 39);
     const Color textColor = Color.fromARGB(255, 228, 205, 104);
 
@@ -89,6 +84,7 @@ class _HomePageState extends State<HomePage> {
                     if (_youtubePlayerController != null) const SizedBox(height: 50),
                     if (_youtubePlayerController != null)
                       Stack(
+                        key: _pageStorageKey,
                         fit: StackFit.loose,
                         children: [
                           YoutubePlayer(
@@ -178,19 +174,19 @@ class _HomePageState extends State<HomePage> {
                       padding: EdgeInsets.zero,
                       children: [
                         Image.asset(
-                          'assets/images/promo/deity_beauty_shot_1.png',
+                          'assets/images/promo/deity_1.jpg',
                           fit: BoxFit.cover,
                         ),
                         Image.asset(
-                          'assets/images/promo/deity_beauty_shot_2.png',
+                          'assets/images/promo/deity_doctor_1.jpg',
                           fit: BoxFit.cover,
                         ),
                         Image.asset(
-                          'assets/images/promo/deity_beauty_shot_2.png',
+                          'assets/images/promo/doctor_4.jpg',
                           fit: BoxFit.cover,
                         ),
                         Image.asset(
-                          'assets/images/promo/deity_beauty_shot_1.png',
+                          'assets/images/promo/doctor_3.jpg',
                           fit: BoxFit.cover,
                         ),
                       ],
